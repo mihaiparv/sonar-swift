@@ -171,8 +171,8 @@ public class LizardReportParser {
 
     public List<Measure> buildFuncionMeasuresList(double complexMean, int complexityInFunctions, RangeDistributionBuilder builder){
         List<Measure> list = new ArrayList<Measure>();
-        list.add(new Measure(CoreMetrics.FUNCTION_COMPLEXITY, complexMean));
-        list.add(new Measure(CoreMetrics.COMPLEXITY_IN_FUNCTIONS).setIntValue(complexityInFunctions));
+//        list.add(new Measure(CoreMetrics.FUNCTION_COMPLEXITY, complexMean));
+//        list.add(new Measure(CoreMetrics.COMPLEXITY_IN_FUNCTIONS).setIntValue(complexityInFunctions));
         return list;
     }
 
