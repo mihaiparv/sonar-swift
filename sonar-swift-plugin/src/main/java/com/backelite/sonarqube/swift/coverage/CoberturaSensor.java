@@ -19,6 +19,9 @@ package com.backelite.sonarqube.swift.coverage;
 
 
 import com.backelite.sonarqube.commons.Constants;
+import com.backelite.sonarqube.objectivec.lang.core.ObjectiveC;
+import com.backelite.sonarqube.swift.lang.core.Swift;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.sonar.api.batch.fs.FileSystem;
@@ -70,6 +73,7 @@ public class CoberturaSensor implements Sensor {
     public void describe(SensorDescriptor descriptor) {
         descriptor
                 .name("Cobertura")
+                .onlyOnLanguages(Swift.KEY, ObjectiveC.KEY)
                 .onlyOnFileType(InputFile.Type.MAIN);
     }
 
